@@ -148,7 +148,7 @@ enum layer_number {
 
 #define L_SPC LT(_LEFT, KC_SPC)
 #define R_BSPC LT(_RIGHT, KC_BSPC)
-#define CTL_ESC MT(MOD_LCTL, KC_ESC)
+#define CTL_TAB MT(MOD_LCTL, KC_TAB)
 #define SFT_DEL MT(MOD_LSFT, KC_DEL)
 
 /* 6th columns
@@ -167,16 +167,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       _______,    KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,                         KC_K,    KC_H, KC_COMM,  KC_DOT, KC_SLSH, _______,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          _______, CTL_ESC,   L_SPC,     R_BSPC, SFT_DEL, _______
+                                          _______, CTL_TAB,   L_SPC,     R_BSPC, SFT_DEL, _______
                                       //`--------------------------'  `--------------------------'
   ),
 
   // braces / numPad
   [_LEFT] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      _______,  KC_INS, KC_PAUS, KC_SLCK, KC_PSCR,  KC_TAB,                      KC_SLSH,    KC_7,    KC_8,    KC_9, KC_MINS, _______,
+      _______,  KC_INS, KC_PAUS, KC_SLCK, KC_PSCR,  KC_ESC,                      KC_SLSH,    KC_7,    KC_8,    KC_9, KC_MINS, _______,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______,   KC_LT, KC_LBRC, KC_LCBR, KC_LPRN,  KC_ENT,                      KC_ASTR,    KC_4,    KC_5,    KC_6, KC_PLUS, _______,
+      _______,   KC_LT, KC_LBRC, KC_LCBR, KC_LPRN, KC_BSPC,                      KC_ASTR,    KC_4,    KC_5,    KC_6, KC_PLUS, _______,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       _______,   KC_GT, KC_RBRC, KC_RCBR, KC_RPRN,  KC_DEL,                         KC_0,    KC_1,    KC_2,    KC_3,  KC_DOT, _______,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
